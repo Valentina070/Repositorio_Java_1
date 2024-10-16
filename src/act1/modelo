@@ -1,0 +1,25 @@
+@startuml
+
+class Restaurante{
+String nombre;
+String especialidad;
+int capacidad;
+String ubicacion;
+String contacto;
+}
+class Menu {
+String nombre;
+String tipo;
+double precio;
+}
+class Cliente{
+String nombre;
+String preferencias;
+String edad;
+String contacto;
+}
+Restaurante"1" -- "*" Menu : poseer
+Restaurante"1" -- "*" Cliente: servir
+Cliente"1" -- "*" Menu : acceder
+
+@enduml
